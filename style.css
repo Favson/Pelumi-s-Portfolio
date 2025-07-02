@@ -1,0 +1,874 @@
+/* Basic Resets and Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -25px auto;
+}
+
+.logo img {
+    height: 20vh;
+    /* Adjust as needed */
+    padding: 0px;
+}
+
+/* --- Menu Toggle Button Styling --- */
+.menu-toggle {
+    display: none;
+    /* Hidden by default, will be shown on small screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    /* Ensure it's above other elements if needed */
+}
+
+.hamburger-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* --- Navigation Container Styling --- */
+.nav-container {
+    /* Initially hidden by default for small screens */
+    display: none;
+    flex-grow: 1;
+    /* Allows it to take available space */
+    justify-content: flex-end;
+    /* Pushes nav to the right */
+    align-items: center;
+}
+
+/* Style for when the menu is open */
+.nav-container.active {
+    display: flex;
+    /* Show the menu */
+    flex-direction: column;
+    /* Stack items vertically when open on small screens */
+    position: absolute;
+    /* Position it relative to the header */
+    top: 100%;
+    /* Below the header */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Flex for horizontal layout on larger screens */
+    flex-direction: column;
+    /* Default for mobile/toggled view */
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 10px 0;
+    /* Adjust spacing for vertical menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: block;
+    /* Make link fill available space */
+    padding: 10px 0;
+}
+
+nav ul li a:hover {
+    color: #2533ce;
+    /* Example hover color */
+}
+
+.book-session-btn {
+    background-color: #3643d8;
+    /* Blue color from the screenshot */
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    /* Spacing for button in vertical menu */
+}
+
+.book-session-btn:hover {
+    background-color: #4a4abf;
+    /* Slightly darker blue on hover */
+}
+
+
+.hero-section {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding-top: 120px;
+    overflow: hidden;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-content {
+    flex: 1;
+
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.hero-content h1 img {
+    height: 60vh;
+    margin-left: -120px;
+    margin-right: -65px;
+    margin-top: -400px;
+    margin-bottom: -350px;
+    width: 360px;
+    vertical-align: middle;
+}
+
+
+
+.hero-content .tagline {
+    font-size: 1.6em;
+    color: #3d3d3d;
+    font-weight: 500;
+    width: 76%;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    width: 58%;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.text-overlay {
+    position: relative;
+    left: 50%;
+}
+
+.hero-image-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.hero-image-container>img:first-child {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.icon-calendar {
+    position: absolute;
+    bottom: 20px;
+    left: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.icon-calendar img {
+    width: 60px;
+    height: 60px;
+}
+
+.union {
+    position: absolute;
+    width: 80px;
+    height: auto;
+}
+
+.union-yellow {
+    top: -1%;
+    left: 1%;
+}
+
+.union-blue {
+    bottom: 3%;
+    right: -2%;
+}
+
+/* Section Placeholders (No changes from previous) */
+.section-placeholder {
+    overflow: hidden;
+    padding: 50px 0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.section-placeholder .container {
+    align-items: center;
+    gap: 17px;
+    overflow: hidden;
+}
+
+#container-un-div {
+    position: relative;
+    left: 5%;
+    gap: 90px;
+    overflow: hidden;
+}
+
+#divAdmin {
+    border: 1px;
+    border-radius: 10px;
+}
+
+.span-img {
+    position: absolute;
+    left: 34%;
+}
+
+.span-img1 {
+    position: absolute;
+    right: -8%;
+}
+
+.span-img2 {
+    position: absolute;
+    right: -7%;
+    bottom: -97%;
+}
+
+.section-placeholder:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.section-placeholder h2 {
+    font-size: 2.5em;
+
+}
+
+.section-placeholder p {
+    color: #666;
+}
+
+/* OUR PROJECT */
+.slide-container {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.section-tag {
+    font-size: 0.9em;
+    color: #aaaaaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#calendarDiv p {
+    margin-top: 100px;
+    color: white;
+}
+
+#calendar {
+    position: absolute;
+    right: 9.4%;
+}
+
+.management-list {
+    list-style-position: inside;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+}
+
+.management-list li {
+    color: rgba(255, 255, 255, 0.45);
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+
+.management-list .li1 {
+    font-size: 18px;
+}
+
+.management-list .li2 {
+    font-size: 16px;
+}
+
+.management-list .li3 {
+    font-size: 14px;
+    position: absolute;
+    right: 9.6%;
+}
+
+.management-list .li4 {
+    font-size: 12px;
+}
+
+.detail-list li {
+    padding-left: 20px;
+    position: relative;
+    color: #cccccc;
+    font-size: 1em;
+    line-height: 35px;
+}
+
+.description {
+    font-size: 0.95em;
+}
+
+
+/* Project Management Tools */
+.section-heading-sub {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.section-heading-main {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #212529;
+    width: 75%;
+    margin-bottom: 2rem;
+}
+
+#intro-text-div{
+    position: absolute;
+    left: 67.7%;
+    
+    padding-top: 90px;
+}
+
+.intro-text {
+    font-size: 0.95rem;
+    color: #495057;
+    line-height: 1.6;
+    width: 50%;
+}
+
+.card-custom {
+    border: none;
+    border-radius: 1rem; /* Rounded corners for cards */
+    overflow: hidden; /* Ensures image respects border-radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    position: relative; /* For overlay positioning */
+    min-height: 400px; /* Ensure consistent card height */
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    color: white;
+}
+
+.card-title-tool {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card-text-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    max-height: 75px; /* Limit height for summary */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show up to 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+.read-more-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.read-more-btn:hover {
+    background-color: white;
+    color: #333;
+}
+
+.read-more-arrow {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    filter: invert(1); /* Makes the arrow white */
+}
+.read-more-btn:hover .read-more-arrow {
+    filter: invert(0); /* Makes the arrow dark on hover */
+}
+
+/* Adjustments for image sizing within cards to fill space */
+.card-custom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place image behind overlay */
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Place overlay above image */
+}
+
+/* Modal specific styling */
+.modal-content {
+    border-radius: 1rem;
+}
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.modal-title {
+    font-weight: 700;
+    color: #333;
+}
+.modal-body {
+    color: #555;
+}
+
+/* Carousel image styling */
+.modal-image-carousel .carousel-item img {
+    width: 100%;
+    height: 400px; /* Fixed height for carousel images */
+    object-fit: contain; /* Ensures the whole image is visible */
+    border-radius: 0.5rem;
+    background-color: #f0f2f5; /* Light background for images */
+}
+
+/* Carousel control styling */
+.modal-image-carousel .carousel-control-prev-icon,
+.modal-image-carousel .carousel-control-next-icon {
+    filter: invert(1); /* Make carousel arrows white */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%; /* Make controls thinner */
+}
+
+.carousel-indicators button {
+    background-color: #6c757d; /* Grey indicators */
+}
+.carousel-indicators .active {
+    background-color: #333; /* Darker grey for active indicator */
+}
+
+.carousel-image-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem; /* Space between elements */
+}
+
+.carousel-image-controls .btn {
+    background-color: #6c757d; /* Grey buttons */
+    border: none;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-image-controls .btn:hover:not(.disabled) {
+    background-color: #495057; /* Darker grey on hover */
+}
+
+.carousel-image-controls .btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.carousel-image-controls img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1); /* White arrow icon */
+}
+
+.carousel-image-controls .page-info {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.about-me p {
+    width: 74%;
+    font-weight: 500;
+}
+
+.icon1 {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+/* Custom purple color for accents */
+:root {
+    --purple-main: #3643d8;
+    --purple-light: #3643d8;
+}
+
+.text-purple-main {
+    color: var(--purple-main) !important;
+}
+
+.border-bottom-purple {
+    border-bottom: 3px solid var(--purple-main);
+    /* Thicker underline */
+    display: inline-block;
+    /* Ensures border only covers text width */
+    padding-bottom: 5px;
+    /* Space between text and line */
+}
+
+.card {
+    border: none;
+    /* Remove default card border */
+    border-radius: 1rem;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Slight lift on hover */
+}
+
+.certification-icon {
+    width: 40px;
+    /* Size of the star icon */
+    height: 40px;
+    color: var(--purple-main);
+    /* Icon color */
+    margin-bottom: 1rem;
+    /* Space below icon */
+}
+
+.view-certificate-link {
+    color: var(--purple-main);
+    /* Link text color */
+    font-weight: 600;
+    text-decoration: none;
+    /* No underline by default */
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease-in-out;
+}
+
+.view-certificate-link:hover {
+    color: var(--purple-light);
+    /* Lighter purple on hover */
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.external-link-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    vertical-align: middle;
+    fill: currentColor;
+    /* Inherit color from parent link */
+}
+
+/* Adjustments for heading spacing */
+.section-heading {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    /* Bold */
+    letter-spacing: 0.05em;
+    /* Spacing between letters */
+}
+
+
+@media (max-width: 900px) {
+    #calendarDiv p {
+        margin-top: 10px;
+    }
+
+    #calendar {
+        position: relative;
+        text-align: center;
+    }
+
+    .breakCal {
+        display: none;
+    }
+
+    .management-list .li1,
+    .management-list .li2,
+    .management-list .li3,
+    .management-list .li4 {
+        font-size: 0.93em;
+        float: left;
+    }
+
+    .management-list .li3 {
+        left: 10.7%;
+    }
+
+    .section-heading-main {
+        width: 100%;
+        
+    }
+
+    #intro-text-div{
+        position: relative;
+        left: 0%;
+        right: 0%;
+        text-align: justify;
+    }
+    
+    .intro-text {
+        width: 100%;
+        text-align: justify;
+    }
+}
+
+
+
+/* --- Responsive Design with Menu Toggle Logic --- */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header .container {
+        flex-direction: row;
+        /* Keep logo and toggle on one row */
+        justify-content: space-between;
+        /* Space them out */
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Show the hamburger button on small screens */
+    }
+
+    .nav-container {
+        display: none;
+        /* Hide the nav-container by default on small screens */
+        position: absolute;
+        top: 100%;
+        /* Position it right below the header */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        box-sizing: border-box;
+        /* Include padding in width */
+        z-index: 999;
+    }
+
+    .nav-container.active {
+        display: flex;
+        /* Show the navigation when .active class is added */
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items horizontally */
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Stack list items vertically */
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content h1 img {
+        height: 35vh;
+    }
+
+    .hero-image-container {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .hero-image-container .profile-img {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -20px;
+    }
+
+    .tagline,
+    .hero-content p {
+        margin: auto auto;
+    }
+
+    .union-yellow {
+        top: -2%;
+        left: -3%;
+    }
+
+    .span-img {
+        position: absolute;
+        left: 78%;
+    }
+
+    #container-un-div {
+        position: relative;
+        left: 0%;
+        overflow: hidden;
+        gap: 10px;
+        ;
+    }
+
+    .span-img1 {
+        position: absolute;
+        right: -2%;
+    }
+
+    .span-img2 {
+        bottom: -103%;
+        right: -5%;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+    /* Styles for larger screens: keep navigation visible */
+    .menu-toggle {
+        display: none;
+        /* Hide toggle button on larger screens */
+    }
+
+    .nav-container {
+        display: flex;
+        /* Always show nav-container on larger screens */
+        position: static;
+        /* Remove absolute positioning */
+        width: auto;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        /* Horizontal layout for list items */
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+        margin-top: 0;
+    }
+
+    .book-session-btn {
+        margin-top: 0;
+        /* Remove top margin */
+        margin-left: 20px;
+        /* Add margin to separate from nav links */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+}
